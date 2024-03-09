@@ -79,12 +79,29 @@ THIRD_PARTY_APPS = [
     "rest_framework.authtoken",
     "corsheaders",
     "drf_spectacular",
+    "ckeditor",
+    "sorl.thumbnail",
+    "rosetta"
 ]
 
 LOCAL_APPS = [
     "users",
+    "www_uz"
     # Your stuff: custom apps go here
 ]
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        # 'skin': 'moono',
+        'skin': 'office2013',
+        'toolbar_Basic': [
+            ['Source', '-', 'Bold', 'Italic']
+        ],
+        'toolbar': 'full',
+    },
+}
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
